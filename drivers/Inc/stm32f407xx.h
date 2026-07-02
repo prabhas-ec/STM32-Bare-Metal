@@ -9,6 +9,7 @@
 #define INC_STM32F407XX_H_
 
 #include <stdint.h>
+#include <stddef.h>
 #define _vo volatile
 
 /********************************** Processor Specific Details *****************************************/
@@ -406,7 +407,7 @@ typedef struct
 
 
 /*
- * IRQ(Interrupt Request) Nubmer of STM32F407x MCU
+ * IRQ(Interrupt Request) Number of STM32F407x MCU
  * NOTE: Update these macros with valid values according to your MCU
  */
 #define IRQ_NO_EXTI0			6
@@ -417,6 +418,22 @@ typedef struct
 #define IRQ_NO_EXTI9_5			23
 #define IRQ_NO_EXTI15_10		40
 
+#define IRQ_NO_SPI1			35
+#define IRQ_NO_SPI2         36
+#define IRQ_NO_SPI3         51
+#define IRQ_NO_SPI4
+#define IRQ_NO_I2C1_EV     31
+#define IRQ_NO_I2C1_ER     32
+#define IRQ_NO_USART1	    37
+#define IRQ_NO_USART2	    38
+#define IRQ_NO_USART3	    39
+#define IRQ_NO_UART4	    52
+#define IRQ_NO_UART5	    53
+#define IRQ_NO_USART6	    71
+
+/*
+ * MACROS for all the possible priority levels
+ */
 #define NVIC_IRQ_PRI0			0
 #define NVIC_IRQ_PRI1			1
 #define NVIC_IRQ_PRI2			2
